@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Dialog</title>
+  <style>
+   
+    #openModalButton:checked ~ #overlay,
+    #openModalButton:checked ~ #myModal {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="checkbox" id="openModalButton">
+  <label for="openModalButton" id="openModalLabel">Open Modal</label>
+
+  <div id="overlay"></div>
+
+  <div id="myModal">
+    
+  </dialog>
+
+</body>
+</html>

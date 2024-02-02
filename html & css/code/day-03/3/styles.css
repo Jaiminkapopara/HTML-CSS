@@ -1,0 +1,164 @@
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+  --Font-size: 14px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Cream);
+}
+
+.card {
+  display: flex;
+  height: 500px;
+  width: 700px;
+  background: var(--White);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.left {
+  flex: 1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  /* background-image: url('images/image-product-desktop.jpg'); */
+}
+
+.mobile_img{
+  display: none;
+}
+
+.desktop_img{
+  display: block;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right {
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  padding: 40px;
+}
+
+.sub_title {
+  letter-spacing: 8px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--Dark-grayish-blue);
+}
+
+.title {
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+  padding: 20px 0;
+  line-height: 40px;
+  color: var(--Very-dark-blue);
+}
+
+.detail {
+  font-size: var(--Font-size);
+  font-family: "Montserrat", sans-serif;
+  color: var(--Dark-grayish-blue);
+  line-height: 25px;
+}
+
+.prices {
+  display: flex;
+  gap: 20px;
+  padding: 30px 0;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.discount {
+  font-size: 30px;
+  font-family: "Fraunces", serif;
+  color: var(--Dark-cyan);
+}
+
+.price {
+  text-decoration: line-through;
+  color: var(--Dark-grayish-blue);
+}
+
+.button {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    flex-direction: column;
+    width: 90vw;
+    height: 600px;
+  }
+
+  .right{
+    /* background: #000; */
+  }
+
+  .image{
+    /* width: 100%; */
+  /* height: 100%; */
+  /* background-image: url('images/image-product-mobile.jpg'); */
+  /* object-fit: cover; */
+  }
+
+  .mobile_img{
+    display: block;
+  }
+
+  .desktop_img{
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .title{
+    font-size: 30px;
+    padding: 10px 0;
+  }
+
+  .sub_title{
+    font-size: var(--Font-size);
+  }
+
+  .prices{
+    padding: 10px 0;
+  }
+}
